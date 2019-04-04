@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <title>SPCA Cincinnati Mobile App</title>
+  </head>
+    <style>
+        body {
+            position: absolute;
+            margin: 0;
+        }
+        
+        .ARinterface {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 50vw;
+            background: linear-gradient(hsla(0, 0%, 0%, 0.5), transparent);
+            color: white;
+            z-index: 999;
+        }
+        
+        #introduction_header{
+            position: absolute;
+            top: 10vw;
+            left: 10vw;
+            width: 75vw;
+            opacity: 0;
+            font-size: 2em;
+            font-family: 'Muli', sans-serif;
+            animation: introduction 10s 3;
+        }
+        
+        #pointer {
+            position: absolute;
+            top:25vw;
+            left: 50vw;
+            width: 50px;
+            height: 50px;
+            border: 3px solid lightgreen;
+            border-radius: 50%;
+            filter: drop-shadow(1px 1px 1px black);
+            font-size: 1em;
+            line-height: calc(50px - 0.5em);
+            text-align: center;
+            opacity: 0;
+            animation: blinking 2s 3s;
+        }
+        
+        @keyframes blinking {
+            0%{transform: scale(0.1); opacity: 0;}
+            25% {transform: scale(1); opacity: 1;}
+            30% {transform: scale(1); opacity: 0;}
+            35% {transform: scale(1); opacity: 1;}
+            80% {transform: scale(1); opacity: 1;}
+            100% {transform: scale(1); opacity: 0;}
+        }
+        
+        @keyframes introduction {
+            0%{transform: translateX(-50vw); opacity: 0;}
+            20% {transform: translateX(0vw); opacity: 1;}
+            80% {transform: translateX(0vw); opacity: 1;}
+            100%{transform: translateX(-50vw); opacity: 0;}
+        }
+        
+        .btn-none {
+            background-color: transparent;
+            border: none;
+            color: gray;
+            text-decoration: none;
+        }
+
+        #affiliation {
+            margin-top: 10px;
+            margin-bottom: 0;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            text-align: center;
+            background-color: black;
+            color: gray;
+            text-decoration: none;
+            text-decoration-color: darkkhaki;
+        }
+        #MyShot{
+            position: absolute;
+            transform:rotate(-270deg);
+            height:20vmin;
+            width:20vmin;
+            overflow: hidden;
+            display: inline-block;
+        }
+        #SPCAShot{
+            position: absolute;
+            transform:rotate(-270deg);
+            height:20vmin;
+            width:20vmin;
+            overflow: hidden;
+            display: inline-block;
+            left:120vmin;
+        }
+        #KittyCity{
+            position: absolute;
+            transform:rotate(-270deg);
+            height:20vmin;
+            width:20vmin;
+            overflow: hidden;
+            display:inline-block;
+            left: 40vmin;
+          
+        }
+        #StickyNotes{
+            position: absolute;
+            transform:rotate(-270deg);
+            height:20vmin;
+            width:20vmin;
+            overflow: hidden;
+            left: 80vmin;
+        }
+        #imgwrap{
+            width:80vw;
+            height:25vh;
+            overflow:hidden;
+        }
+        #storywrap{
+            width:80vw;
+            height:30vh;
+        }
+        #story1{
+            background-image: url("story1.jpeg");
+            background-size:contain;
+            position:absolute;
+            width:20vmin;
+            height:20vmin;
+            background-repeat: no-repeat;
+            transform: rotate(-270deg);
+          
+        }      
+        #story2{
+            background-image: url("story2.jpeg");
+            background-size:contain;
+            position:absolute;
+            width:20vmin;
+            height:20vmin;
+            background-repeat: no-repeat;
+            transform: rotate(-270deg);
+            left:30vmin;
+        }        
+        #story3{
+            background-image: url("story3.jpeg");
+            background-size:contain;
+            position:absolute;
+            width:20vmin;
+            height:20vmin;
+            background-repeat: no-repeat;
+            transform: rotate(-270deg);
+            left:60vmin;
+        }        
+        #story4{
+            background-image: url("story4.jpeg");
+            background-size:contain;
+            position:absolute;
+            width:20vmin;
+            height:20vmin;
+            background-repeat: no-repeat;
+            transform: rotate(-270deg);
+            left:90vmin;
+        }
+
+
+    </style>
+  <body>
+      
+    <div class="ARinterface"> <div id="introduction_header"> How can we use app technology to benefit animals? </div>
+      </div>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="SPCA-Daisy.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="SPCAVan.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="spcafront.jpg" alt="Third slide">
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+        <h1>SPCA Cincinnati Mobile App </h1>
+        <p>Using app technology to help SPCA promote adoption and animal wellness</p>
+         <a class="btn btn-info btn-lg" href="#" role="button">Prototype Link</a>
+        <hr> 
+          <p>The SPCA Cincinnati Mobile App is an app designed to help promote adoption and fostering of rescued animals. The staff and volunteers of SPCA Cincinnati work hard to provide the best treatment for animals in their care. However, an average of 36 new animals per day calls for increased community involvement to save the lives of animals in need. Although the SPCA has a mobile version of their website, I believe that developing an interactive app would increase community awareness and involvement, and promote adoption, fostering, and donations for the SPCA Cincinnati.</p>
+    </div>
+      
+
+
+<div class="container">
+    #4. Three main features (menu, information architecture)
+    <div class="row">
+      <div class="col-sm-4">
+          <a class="btn btn-link" role="button" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
+          <img src="icon.png" width="200" height="200" class="figure-img img-fluid rounded" alt="Curioxity Explorer point to know feature"><br>Notifications
+        </a>
+      </div>
+        <div class="col-sm-4">  
+        <a class="btn btn-link" role="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+            <img src="user.png" width="200" height="200" class="figure-img img-fluid rounded" alt="Curioxity Explorer Capture the moment feature"> <br> User Profiles
+        </a>
+        </div>
+          <div class="col-sm-4 ">
+        <a class="btn btn-link" role="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+            <img src="video-camera.png" width="200" height="200" class="figure-img img-fluid rounded" alt="Curioxity Explorer Collect and Share feature"> <br> Animal Livestream
+        </a>
+        </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="card card-body">
+              A notifications tab would provide users with alerts when new dogs and cats have become available for fostering/adoption, when new volunteer oppotunities have been posted, and when the shelter is in need of donatable items. This page will also link users to portals that would allow them to sign up to volunteer or donate/purchase a needed item for the shelter.
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+          <div class="card card-body">
+              A profile system for users would allow them to post pictures and videos of themselves and their pets, promoting user involvement. The page would also provide the user with an opportunity to link their social media accounts to increase SPCA Cincinnati's exposure.
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-4">
+        <div class="collapse multi-collapse" id="multiCollapseExample3">
+          <div class="card card-body">
+              A live-streaming feature of the adoptable cats in Kitty City is likely to get the animals more exposure and promote adoption, increase traffic to the app, and entertain and involve viewers that simply enjoy watching cats.
+          </div>
+        </div>
+      </div>
+    </div>
+</div>    
+
+
+   
+<div class="card text-white mb-3" style="margin-top: 50px;">
+  <img  class="card-img-top"  src="spca_location2.png" alt="Card image cap">
+  <div class="card-img-overlay">
+      
+    <blockquote class="blockquote text-center" style="position:absolute; width: 100%; bottom: 3%;">
+      <p class="mb-0">"Exposure is the key to increasing adoption.<br>The more people see these animals, the more likely they are to find forever homes."</p>
+      <footer class="blockquote-footer">Interview with <cite title="Source Title">Elle Willmoth, SPCA Employee</cite></footer>
+    </blockquote>
+      
+  </div>
+</div>
+
+<hr> 
+      
+<div class="container-fluid" style="margin-top: 50px;">
+<h3> Design process </h3>
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          #1. User Research (Interview)
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+          <div id="imgwrap">
+          <img id="MyShot" src="MyshotSPCA.jpeg" />
+          <img id="KittyCity" src="KittyCity.jpeg" />
+          <img id="StickyNotes" src="StickyNotes.jpeg" /> 
+          <img id="SPCAShot" src="SPCAShot.jpeg" />
+          </div>
+        <ul id="Qlist">
+            <li>What services does the SPCA need help with?</li>
+            <li>How could an app help to meet these needs?</li>
+            <li>How do those needs translate to specific features on the app?</li>
+        </ul>
+        <p>To better understand how technology could benefit the SPCA, I  visited the SPCA Cincinnati location in Northside. After speaking to employees and petting cats and dogs, I found that the SPCA is always in need of donations and as much volunteer help as they can get. Their website also currently does not provide an online portal for their regular volunteers to pick up shifts. Another feature that might benefit the shelter would be allowing donations to be purchased in-app. </p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          #2. Brainstorming
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <h5>Insight Statement</h5>
+          <p>Using technology the right way could help with overcrowding and underfunding in animal shelters.</p>
+        <h5>Group Discussion</h5>
+          <p>Although everyone in my group had individual ideas, all of them centered around community and connection with others. We were all looking for ways to connect users and promote sharing of information between them.</p>
+          <ul>
+            <li>How might we use technology to encourage discourse between users?</li>
+            <li>How might we use that discourse and website traffic to benefit the SCPA Cincinnati?</li>
+            <li>How might we develop an app with features that encourage community involvement and volunteering?</li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          #3. Ideation 
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <div id="storywrap">
+          <div id="story1"></div>
+            <div id="story2"></div>
+            <div id="story3"></div>
+            <div id="story4"></div>
+          </div>
+          <ol>
+              <li>This user is ready to volunteer, foster, adopt, or donate but the SPCA website does not include features that allow you to do this online.</li>
+              <li>The user has found the Mobile App</li>
+              <li>The user gets a notifications when new adoptable animals come into the shelter.</li>
+              <li>The user has found the perfect pet and helped the local animal shelter!</li>
+          </ol>
+      </div>
+    </div>
+  </div>
+    
+      <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          #5. Wireframes + Workflow
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+      </div>
+    </div>
+  </div>
+    
+    <div class="card">
+    <div class="card-header" id="headingFive">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          #6. Graphical User Interface
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+      <div class="card-body">
+
+      </div>
+    </div>
+  </div>
+    
+        <div class="card">
+    <div class="card-header" id="headingSeven">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          #8. Pitch
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+      <div class="card-body">
+
+      </div>
+    </div>
+  </div>
+    
+</div>
+
+      
+<hr>
+
+
+    <h3 style="margin-top: 50px;"> #9. Pitch Video Presentation by Dec. 6 </h3>
+     
+    <div class="card" style="width: 100%; border-style: none">
+    <div class="card-body">
+      This video will show you how to use the app -  
+    </div>
+ 
+    </div>
+
+    
+ </div> 
+    
+    
+<footer id="affiliation"> 
+
+        <small>
+            <b> Aubrey Warpool</b> 
+            warpoola1@nku.edu
+        </small>
+    
+ </footer>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
