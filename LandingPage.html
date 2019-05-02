@@ -77,7 +77,6 @@
             color: gray;
             text-decoration: none;
         }
-
         #affiliation {
             margin-top: 10px;
             margin-bottom: 0;
@@ -175,9 +174,14 @@
         }
       #workwrap{
         position:absolute;
-        height:60vmin;
-        width:60vmin;
+        height:80vmin;
+        width:80vmin;
+		  overflow: hidden;
       }
+		#collapseFour{
+			height:60vmin;
+			width:80vmin;
+		}
       
       #workflow{
             background-image: url("SPCAWorkflow.png");
@@ -186,10 +190,17 @@
             width:50vmin;
             height:50vmin;
             background-repeat: no-repeat;
+		  	display:block;
+		  overflow:hidden;
       }
+		#video{
+			position:relative;
+			height: 60vmin;
+			width:80vmin;
+			margin-right: auto;
+			margin-right: auto;
+		}
       
-
-
     </style>
   <body>
       
@@ -415,10 +426,13 @@
     <h3 style="margin-top: 50px;"> #9. Pitch Video Presentation by Dec. 6 </h3>
      
     <div class="card" style="width: 100%; border-style: none">
-    <div class="card-body">
+    <div id="video" class="card-body">
       This video will show you how to use the app -  
+		<video width="320" height="240" controls>
+  			<source src="warpool_pitch.mp4" type="video/mp4">
+		</video>
     </div>
- 
+ 		
     </div>
 
     
